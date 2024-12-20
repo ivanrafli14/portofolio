@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ivan Rafli Adipratama - Web Portofolio</title>
+        <link href="/dist/output.css" rel="stylesheet" />
+        <style>
+            html {
+                scroll-behavior: smooth; /* Enables smooth scroll behavior */
+            }
+            ul {
+                list-style-type: disc;
+            }
+        </style>
+
+        <!--On Scroll Animation AOS CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <!--Swiper Slider CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+    </head>
+
+    <body>
+        <!-- Navbar Start -->
+        <nav
+            class="flex flex-wrap items-center justify-between p-5 bg-secondary-500"
+        >
+            <a
+                class="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+            >
+                <span class="ml-3 text-xl">Ivan</span>
+            </a>
+            <div class="flex md:hidden">
+                <button id="hamburger">
+                    <img
+                        class="toggle block"
+                        src="./asset/menu-squared.png"
+                        alt="menu icon"
+                        width="40"
+                        height="40"
+                    />
+                    <img
+                        class="toggle hidden"
+                        src="./asset/close-window.png"
+                        alt="close icon"
+                        width="40"
+                        height="40"
+                    />
+                </button>
+            </div>
+            <div
+                class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 border-t-2 border-primary-500 md:border-none"
+            >
+                <a
+                    href="#workexperience"
+                    class="block md:inline-block text-slate-200 hover:text-primary-500 px-3 py-3 border-b-2 border-primary-500 md:border-none uppercase"
+                    >Work Experience</a
+                >
+                <a
+                    href="#portfolio"
+                    class="block md:inline-block text-slate-200 hover:text-primary-500 px-3 py-3 border-b-2 border-primary-500 md:border-none uppercase"
+                    >Portfolio</a
+                >
+                <a
+                    href="#skills"
+                    class="block md:inline-block text-slate-200 hover:text-primary-500 px-3 py-3 border-b-2 border-primary-500 md:border-none uppercase"
+                    >Skills</a
+                >
+
+            </div>
+            <a
+                href="#contact"
+                class="toggle hidden md:flex w-full md:w-auto px-4 py-2 text-right bg-primary-500 hover:bg-secondary-600 hover:text-primary-500 text-white md:rounded"
+                >Hire me</a
+            >
+        </nav>
+
+        <!-- Navbar End-->
+
+        <!-- Hero Section Start-->
+        <section class="text-gray-400 bg-secondary-500 body-font">
+            <div
+                class="container mx-auto flex px-5 py-16 md:flex-row flex-col items-center"
+            >
+                <div
+                    class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 border-solid border-[18px] border-secondary-600 drop-shadow-xl sm:order-1 lg:order-2"
+                >
+                    <img
+                        class="object-cover object-center rounded"
+                        alt="hero"
+                        src="./asset/file.jpg"
+                    />
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:pt-10 pt-8 items-center text-center"
+                >
+                    <h1
+                        class="title-font sm:text-6xl leading-6 text-3xl mb-4 font-bold text-white"
+                    >
+                        Hi, I'm <span class="text-primary-500">Ivan.</span>
+                    </h1>
+                    <h2
+                        class="text-xl sm:text-3xl font-bold flex items-center mb-5"
+                    >
+                        <span id="animatedText"></span>
+                    </h2>
+                    <p class="mb-8 leading-relaxed text-slate-200 text-justify text-xl">
+                        A Third-year Computer Science student specializing in
+                        Computer Engineering who have interest in Web
+                        Development, App Development, Robotics, Competitive
+                        Programming and Data Science. Self-taught in many
+                        programming languages like Python, C++, Golang, Laravel
+                        etc. I find joy in learning new things and consistently
+                        seek opportunities to enhance my abilities in emerging
+                        technology fields. Beyond theoretical knowledge, I
+                        actively apply my skills through hands-on projects,
+                        cultivating a creative problem-solving mindset with a
+                        solution oriented approach.
+                    </p>
+                    <div class="flex justify-center my-6">
+
+                        <button
+                            class="inline-flex text-white bg-secondary-600 border-0 py-4 px-6 focus:outline-none hover:bg-primary-500 rounded-lg text-lg"
+                            onclick="window.open('https://linkedin.com/in/ivanrafli', '_blank')"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-linkedin"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                                />
+                            </svg>
+                        </button>
+                        <button
+                            class="ml-4 inline-flex text-gray-400 bg-secondary-600 border-0 py-4 px-6 focus:outline-none hover:bg-primary-500 hover:text-white rounded-lg text-lg"
+                            onclick="window.open('https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=ivanrafli14@gmail.com')"                        >
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-envelope"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.824L15 11.383V5.383zM1 5.383v5.992l4.708-2.824L1 5.383zm4.354 3.829L1.5 12.617A1 1 0 0 0 2 13h12a1 1 0 0 0 .5-.383l-3.854-3.405L8 10.383l-2.646-1.171z"
+                            />
+                        </svg>
+                        </button>
+
+                        <button
+                            class="ml-4 inline-flex text-gray-400 bg-secondary-600 border-0 py-4 px-6 focus:outline-none hover:bg-primary-500 hover:text-white rounded-lg text-lg"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-instagram"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Section End-->
+
+        <!-- What I do Section Start -->
+
+        <section
+            id="workexperience"
+            class="text-gray-400 bg-secondary-500 body-font"
+        >
+            <div
+                class="container px-5 py-24 mx-auto flex flex-wrap border-t-2 border-secondary-600"
+            >
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h2
+                        class="sm:text-4xl text-2xl font-medium title-font underline decoration-primary-500 decoration-4 underline-offset-8 text-slate-200"
+                    >
+                        Work Experience
+                    </h2>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div
+                        class="p-4 md:w-1/3"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                    >
+                        <div
+                            class="flex rounded-lg h-full bg-secondary-600 bg-opacity-60 p-8 flex-col"
+                        >
+                            <div class="flex items-center mb-3">
+                                <div
+                                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-primary-500 text-white flex-shrink-0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+                                        />
+                                    </svg>
+                                </div>
+                                <h2
+                                    class="text-slate-200 text-lg title-font font-medium"
+                                >
+                                    Data Structure and Algorithm Teaching
+                                    Assistant
+                                </h2>
+                            </div>
+                            <img
+                                class="h-50 rounded w-full object-cover object-center mb-6 mt-5 duration-500"
+                                src="./asset/filkom.jpg"
+                                alt="content"
+                            />
+                            <div class="flex-grow">
+                                <ul
+                                    class="pl-5 space-y-2 leading-relaxed text-base"
+                                >
+                                    <li>
+                                        Guided and mentored 40+ students in a
+                                        Practicum Class on Data Structures and
+                                        Algorithms, fostering a deeper
+                                        understanding of core concepts.
+                                    </li>
+                                    <li>
+                                        Delivered comprehensive lessons on the
+                                        theory and implementation of data
+                                        structures and algorithms using C/C++.
+                                    </li>
+                                    <li>
+                                        Evaluated and provided constructive
+                                        feedback on student assignments,
+                                        ensuring continuous improvement in their
+                                        coding skills.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-4 md:w-1/3"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
+                        <div
+                            class="flex rounded-lg h-full bg-secondary-600 bg-opacity-60 p-8 flex-col"
+                        >
+                            <div class="flex items-center mb-3">
+                                <div
+                                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-primary-500 text-white flex-shrink-0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                                        />
+                                    </svg>
+                                </div>
+                                <h2
+                                    class="text-slate-200 text-lg title-font font-medium"
+                                >
+                                    Head of Humanoid Vision Programmer
+                                </h2>
+                            </div>
+                            <img
+                                class="h-50 rounded w-full object-cover object-center mb-6 mt-5 duration-500"
+                                src="./asset/LogoRobotiik.png"
+                                alt="content"
+                            />
+                            <div class="flex-grow">
+                                <ul
+                                    class="pl-5 space-y-2 leading-relaxed text-base"
+                                >
+                                    <li>
+                                        Led a team of 10+ members, providing guidance and support in developing solutions and preparing for competitions
+                                    </li>
+                                    <li>
+                                        Developed machine learning and artificial intelligence algorithms using the Python and Robot Operating System (ROS).
+                                    </li>
+                                    <li>
+                                        Contributed to the optimization and enhancement of computer vision solutions through detailed analysis and experimentation.
+                                    </li>
+                                    <li>
+                                        Participated in the Indonesian Robot Competition (KRI) 2024 at the national level.
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="p-4 md:w-1/3"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                    >
+                        <div
+                            class="flex rounded-lg h-full bg-secondary-600 bg-opacity-60 p-8 flex-col"
+                        >
+                            <div class="flex items-center mb-3">
+                                <div
+                                    class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-primary-500 text-white flex-shrink-0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="w-6 h-6"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
+                                        />
+                                    </svg>
+                                </div>
+                                <h2
+                                    class="text-slate-200 text-lg title-font font-medium"
+                                >
+                                Project-Based Virtual Intern: Fullstack Developer BTPN Syariah x Rakamin Academy
+
+                                </h2>
+                            </div>
+                            <img
+                            class="h-50 rounded w-full object-cover object-center mb-6 mt-5 duration-500"
+                            src="./asset/btpn.png"
+                            alt="content"
+                        />
+                            <div class="flex-grow">
+                              <ul>
+                                <li>Implementing user authentication and authorization mechanisms using Go's libraries and frameworks.</li>
+                                <li>Implementing the necessary code and queries in Go to retrieve data about user profile picture from the database and display it on the website.</li>
+                                <li>Taking the lead in designing and developing the website application using Go. This involves creating the user interface, implementing features and functionalities, and ensuring an intuitive and visually appealing user experience.</li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I do Section End -->
+
+        <!-- Portfolio Section Start -->
+        <section
+            id="portfolio"
+            class="text-gray-400 body-font bg-secondary-500"
+        >
+            <div
+                class="container px-5 py-24 mx-auto border-t-2 border-secondary-600"
+            >
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h2
+                        class="sm:text-4xl text-2xl font-medium title-font underline decoration-primary-500 decoration-4 underline-offset-8 text-slate-200"
+                    >
+                        Portfolio
+                    </h2>
+                </div>
+                <div class="flex flex-wrap -m-4">
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <a href="https://github.com/ivanrafli14/Skillo">
+                            <div
+                                class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg"
+                            >
+                                <img
+                                    class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-105 duration-500"
+                                    src="./asset/portfolio/skillo.png"
+                                    alt="content"
+                                />
+                                <h2
+                                    class="text-lg text-slate-200 font-medium title-font mb-4"
+                                >
+                                    Skillo Website
+                                </h2>
+                                <p class="leading-relaxed text-base">
+                                    Skillo is a web-based platform designed to provide an interactive and easily accessible learning experience. This platform focuses on online education, allowing users to select courses based on their interests and learn through well-structured video materials.
+                                </p>
+
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <a href="https://github.com/ivanrafli14/OpenPit">
+                            <div
+                                class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg"
+                            >
+                                <img
+                                    class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-105 duration-500"
+                                    src="./asset/portfolio/openpit.png"
+                                    alt="content"
+                                />
+                                <h2
+                                    class="text-lg text-slate-200 font-medium title-font mb-4"
+                                >
+                                  OpenPit
+                                </h2>
+                                <p class="leading-relaxed text-base">
+                                    Open Pit is a mobile application presented by Medhal Team GDSC UB. This mobile application provides a pick-up and drop-off service for concert goers using bus transportation in order to reduces traffic jams, air pollution and noise pollution.This also makes it easier for users to get transportation services when watching concerts or festivals.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <a href="https://github.com/ivanrafli14/ecommerce-go">
+                            <div
+                                class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg"
+                            >
+                                <img
+                                    class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-105 duration-500"
+                                    src="./asset/portfolio/Product-03.png"
+                                    alt="content"
+                                />
+                                <h2
+                                    class="text-lg text-slate-200 font-medium title-font mb-4"
+                                >
+                                    E-Commerce API
+                                </h2>
+                                <p class="leading-relaxed text-base">
+                                    The API project serves as the backend for an e-commerce platform, offering essential features that facilitate interaction between users, merchants, and administrators. The API is designed to handle critical functions such as authentication, profile management, product management, category management, order processing, and integration with a search system like Meilisearch to enable fast and accurate product discovery. Additionally, the system includes a payment gateway integration, allowing seamless and secure transactions for purchases within the platform.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <a href="https://vigowebs.gumroad.com/l/melina">
+                            <div
+                                class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg"
+                            >
+                                <img
+                                    class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-105 duration-500"
+                                    src="./asset/portfolio/mesage-app.png"
+                                    alt="content"
+                                />
+                                <h2
+                                    class="text-lg text-slate-200 font-medium title-font mb-4"
+                                >
+                                    Message App
+                                </h2>
+                                <p class="leading-relaxed text-base">
+                                    This project is a Realtime Chat Application built with Golang as the backend, integrated with the ELK Stack (Elasticsearch, Logstash, Kibana) for logging, monitoring, and visualization. The chat application supports real-time messaging using WebSockets and stores logs for analytics and debugging.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <a href="https://github.com/ivanrafli14/Puzzle-game">
+                            <div
+                                class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg"
+                            >
+                                <img
+                                    class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-105 duration-500"
+                                    src="./asset/portfolio/puzzle-image.png"
+                                    alt="content"
+                                />
+                                <h2
+                                    class="text-lg text-slate-200 font-medium title-font mb-4"
+                                >
+                                    Puzzle Game
+                                </h2>
+                                <p class="leading-relaxed text-base">
+                                    This project is an interactive puzzle game that utilizes hand tracking powered by OpenCV to create a fun and engaging experience. The game leverages computer vision techniques to detect and track the movement of the player's hands in real time. Instead of traditional input devices like a mouse or keyboard, players use gestures to interact with the puzzle pieces, enhancing the gameplay with a unique and immersive approach.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/3 md:w-1/2 p-4">
+                        <a href="https://vigowebs.gumroad.com/l/shoppr-flutter">
+                            <div
+                                class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg"
+                            >
+                                <img
+                                    class="h-40 rounded w-full object-cover object-center mb-6 hover:scale-105 duration-500"
+                                    src="./asset/portfolio/Product-02.png"
+                                    alt="content"
+                                />
+                                <h2
+                                    class="text-lg text-slate-200 font-medium title-font mb-4"
+                                >
+                                    Flutter Mobile App
+                                </h2>
+                                <p class="leading-relaxed text-base">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Sunt dolor maxime vitae
+                                    soluta sequi facere?
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Portfolio Section End -->
+
+        <!-- Skills Section Start-->
+        <section id="skills" class="text-gray-400 bg-secondary-500 body-font">
+            <div
+                class="container px-5 py-24 mx-auto flex flex-wrap border-t-2 border-secondary-600"
+            >
+                <div class="flex flex-col text-center w-full mb-20">
+                    <h2
+                        class="sm:text-4xl text-2xl font-medium title-font underline decoration-primary-500 decoration-4 underline-offset-8 text-slate-200"
+                    >
+                        My Skills
+                    </h2>
+                </div>
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+                >
+                    <h2
+                        class="title-font sm:text-3xl text-xl mb-4 font-bold text-white"
+                    >
+                        Software Developmet
+                    </h2>
+                    <p class="mb-8 leading-relaxed text-slate-200">
+                        I can use HTML, CSS, and JavaScript to develop interactive and responsive websites. I am also proficient in using Laravel as a full stack framework to build reliable website. Additionally, I have experience with Flutter for cross-platform application development and Go for building fast and efficient applications API. I use React and tailwind as my front-end framework to build a modern and responsive website UI.
+                    </p>
+                </div>
+
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+                >
+                    <div class="flex flex-wrap -m-4">
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/html5.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/css.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/javascript.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/laravel.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/react.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/tailwind.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/golang.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                        <div class="p-4 md:w-1/4">
+                            <div
+                                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                            >
+                                <img
+                                    class="w-12"
+                                    src="./asset/skills/flutter.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+            >
+                <h2
+                    class="title-font sm:text-3xl text-xl mb-4 font-bold text-white"
+                >
+                    DevOps / Infrastructure
+                </h2>
+                <p class="mb-8 leading-relaxed text-slate-200">
+                    I am experienced in managing application environments with Docker for containerization, making deployment and scaling more efficient. I can work with cloud platforms like AWS and Google Cloud to host and manage applications while ensuring scalability and reliability. Moreover, I can utilize ELK Stack for log management, performance monitoring, and troubleshooting application issues in real time.
+                </p>
+            </div>
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+            >
+                <div class="flex flex-wrap -mx-4 -my-5">
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/dockers.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/aws.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/gcloud.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/elastic_search.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/logstash.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/kibana.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center mt-25"
+            >
+                <h2
+                    class="title-font sm:text-3xl text-xl mb-4 font-bold text-white"
+                >
+                    AI and Machine Learning
+                </h2>
+                <p class="mb-8 leading-relaxed text-slate-200">
+                    I have expertise in using Python for building machine learning models, with a focus on using libraries such as PyTorch for deep learning and OpenCV for image processing tasks. I can leverage YOLO for real-time object detection in various computer vision applications. Furthermore, I am familiar with TensorFlow for building and training machine learning models. My skills also include designing intelligent systems for real-world applications using these technologies.
+                </p>
+            </div>
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center mt-5"
+            >
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/python.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/opencv.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/pytorch.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div class="p-4 md:w-1/4">
+                        <div
+                            class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                        >
+                            <img
+                                class="w-12"
+                                src="./asset/skills/yolo.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+    >
+        <h2
+            class="title-font sm:text-3xl text-xl mb-4 font-bold text-white"
+        >
+            Database
+        </h2>
+        <p class="mb-8 leading-relaxed text-slate-200">
+            I am proficient in working with relational databases like MySQL and PostgreSQL to store and manage structured data efficiently. I also have experience with MongoDB for handling unstructured data in a document-based format. Additionally, I can use Redis for in-memory data storage and caching to improve application performance. These tools allow me to design and maintain databases tailored to specific project requirements.
+        </p>
+    </div>
+    <div
+        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+    >
+        <div class="flex flex-wrap -mx-4 -my-5">
+            <div class="p-4 md:w-1/4">
+                <div
+                    class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                >
+                    <img
+                        class="w-12"
+                        src="./asset/skills/mysql.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <div
+                    class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                >
+                    <img
+                        class="w-12"
+                        src="./asset/skills/postgre.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="p-4 md:w-1/4">
+                <div
+                    class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                >
+                    <img
+                        class="w-12"
+                        src="./asset/skills/mongodb.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+
+            <div class="p-4 md:w-1/4">
+                <div
+                    class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+                >
+                    <img
+                        class="w-12"
+                        src="./asset/skills/redis.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div
+    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+>
+    <h2
+        class="title-font sm:text-3xl text-xl mb-4 font-bold text-white"
+    >
+        Other technology
+    </h2>
+    <p class="mb-8 leading-relaxed text-slate-200">
+        I have strong skills in C++ for Competitive Programming and Data Structure and Algorithm. I am also experienced in using ROS (Robot Operating System) to develop and manage robotics applications effectively. Additionally, I can work with tools like Cloudinary to manage media assets (e.g., images and videos) in an optimized manner. My knowledge extends to automation tools like Make and other frameworks that support efficient project workflows and Meilisearch for a full text search.
+    </p>
+</div>
+<div
+    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+>
+    <div class="flex flex-wrap -m-4">
+        <div class="p-4 md:w-1/4">
+            <div
+                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+            >
+                <img
+                    class="w-12"
+                    src="./asset/skills/c++.png"
+                    alt=""
+                />
+            </div>
+        </div>
+        <div class="p-4 md:w-1/4">
+            <div
+                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+            >
+                <img
+                    class="w-12"
+                    src="./asset/skills/logo-ros.jpg"
+                    alt=""
+                />
+            </div>
+        </div>
+        <div class="p-4 md:w-1/4">
+            <div
+                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+            >
+                <img
+                    class="w-12"
+                    src="./asset/skills/meilisearch-1.png"
+                    alt=""
+                />
+            </div>
+        </div>
+        <div class="p-4 md:w-1/4">
+            <div
+                class="flex rounded-lg bg-secondary-600 hover:scale-110 duration-500 p-4 flex-col justify-center items-center h-full"
+            >
+                <img
+                    class="w-12"
+                    src="./asset/skills/cloudinary.png"
+                    alt=""
+                />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+            </div>
+        </section>
+
+        <!--Skills Section End -->
+
+
+
+        <!-- Testimonial Section End -->
+
+        <!-- Blog Section Start-->
+
+
+        <!--Blog Section End -->
+
+        <!-- Contact Start -->
+        <section
+            id="contact"
+            class="text-slate-200 bg-secondary-500 body-font relative"
+        >
+            <div
+                class="container px-5 py-24 mx-auto border-t-2 border-secondary-600 shadow-lg border-xl drop-shadow-lg"
+            >
+                <div class="flex flex-col text-center w-full mb-12">
+                    <h2
+                        class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white"
+                    >
+                        Contact Me
+                    </h2>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                        If you have anything to say, feel free to reach me.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                    <div
+                        class="bg-secondary-600 bg-opacity-40 p-6 rounded-lg h-full flex items-start"
+                    >
+                        <div class="flex flex-wrap -m-2">
+                            <div class="p-2 w-1/2">
+                                <div class="relative">
+                                    <label
+                                        for="name"
+                                        class="leading-7 text-sm text-slate-200 uppercase"
+                                        >Name</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        class="w-full bg-secondary-600 bg-opacity-40 rounded border border-slate-800 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    />
+                                </div>
+                            </div>
+                            <div class="p-2 w-1/2">
+                                <div class="relative">
+                                    <label
+                                        for="email"
+                                        class="leading-7 text-sm text-slate-200 uppercase"
+                                        >Email</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        class="w-full bg-secondary-600 bg-opacity-40 rounded border border-slate-800 focus:border-primary-500 focus:bg-gray-900 focus:ring-2 focus:ring-primary-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                    />
+                                </div>
+                            </div>
+                            <div class="p-2 w-full">
+                                <div class="relative">
+                                    <label
+                                        for="message"
+                                        class="leading-7 text-sm text-slate-200 uppercase"
+                                        >Message</label
+                                    >
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        class="w-full bg-secondary-600 rounded border border-slate-800 focus:border-primary-500 focus:bg-gray-900 focus:ring-2 focus:ring-primary-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <div class="p-4 w-full">
+                                <button
+                                    class="flex mx-auto text-primary-500 bg-secondary-600 hover:bg-primary-500 hover:text-slate-200 border-lg font-medium py-4 px-10 focus:outline-nonerounded text-lg uppercase"
+                                >
+                                    Send
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact End-->
+
+        <!-- Footer -->
+        <footer class="bg-secondary-600">
+            <div
+                class="px-5 py-6 xl:max-w-maxw m-auto text-center text-slate-400 text-sm"
+            >
+                Copyrights &copy; 2023 | All Rights Reserved with Miranda.
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+        <!-- On Scroll Animation AOS script -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <!-- Swiper Slider Script -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <script>
+            // On Scroll Animation AOS
+            AOS.init();
+
+            // Toggle Navbar for Smaller Screen
+            document.getElementById('hamburger').onclick =
+                function toggleMenu() {
+                    const navToggle = document.getElementsByClassName('toggle');
+                    for (let i = 0; i < navToggle.length; i++) {
+                        navToggle.item(i).classList.toggle('hidden');
+                    }
+                };
+
+            // Swiper Testimonial slider
+            var swiper = new Swiper('.mySwiper', {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                // Breakpoints for smaller device
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    480: {
+                        slidesPerView: 1,
+                    },
+                    640: {
+                        slidesPerView: 3,
+                    },
+                },
+            });
+        </script>
+
+        <script>
+            var typed = new Typed('#animatedText', {
+                strings: ['Software Engineer', 'AI Engineer'],
+                typeSpeed: 40,
+                backSpeed: 40,
+                backDelay: 3000,
+                startDelay: 3000,
+                loop: true,
+            });
+        </script>
+    </body>
+</html>

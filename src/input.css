@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper Slider Pagination bullet CSS */
+.swiper .swiper-pagination .swiper-pagination-bullet {
+    background-color: white;
+}
+
+/* Swiper Slider Pagination bullet Active CSS */
+.swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #e60045;
+}
+
+@keyframes typing-cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.animate-typing-cursor {
+    border-right: 2px solid white; /* The blinking cursor effect */
+    animation: typing-cursor 0.7s steps(1) infinite;
+}
